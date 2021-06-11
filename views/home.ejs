@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1>HOME</h1>
+<p> <%= homeStartingContent %></p>
+
+<% posts.forEach(function(post) { %>
+  <div class="flex-container mb-3">
+    <h2> <%= post.title %> </h2>
+    <p class="d-inline"> <%= post.shortPost %> </p>
+    <a class="d-inline" href=<%=post.link%>>Read More</a>
+  </div>
+<% }); %>
+
+<%- include("partials/footer"); -%>
